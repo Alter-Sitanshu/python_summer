@@ -1,6 +1,6 @@
 import random
 from replit import clear
-from hangman.hangman_art import *
+from hangman_art import *
 print(logo)
 random_word = random.choice(word)
 length = len(random_word)
