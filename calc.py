@@ -8,7 +8,7 @@ def divide(num1,num2):
     return num1/num2
 
 
-# taking the input frmo the user about the numbers
+# taking the input from the user about the numbers
 num1 = eval(input("Enter the first number : "))
 num2 = eval(input("Enter the second number : "))
 
