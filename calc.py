@@ -9,8 +9,8 @@ def divide(num1,num2):
 
 
 # taking the input frmo the user about the numbers
-num1 = int(input("Enter the first number : "))
-num2 = int(input("Enter the second number : "))
+num1 = eval(input("Enter the first number : "))
+num2 = eval(input("Enter the second number : "))
 
 while(True):
     operations = {"+":add,"-":subtract,"*":multiply,"/":divide}
@@ -25,10 +25,10 @@ while(True):
         loop = input(f"Do you want to continue with {answer} ?(yes/no)").lower()
         if(loop=="yes"):
             num1 = answer
-            num2 = int(input("Enter the second number : "))
+            num2 = eval(input("Enter the second number : "))
         else:
-            num1 = int(input("Enter the first number : "))
-            num2 = int(input("Enter the second number : "))
+            num1 = eval(input("Enter the first number : "))
+            num2 = eval(input("Enter the second number : "))
     else:
         break
     
