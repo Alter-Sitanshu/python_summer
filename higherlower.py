@@ -12,10 +12,14 @@ compA = data[a]
 compB = data[b]
 
 def game():
+    clear()
+    global score
+    global compB
+    global compA
     print(logo)
-    print(f"Compare A : {compA["name"]} a {compA["description"]} from {compA["country"]}")
+    print(f"Compare A : {compA['name']} a {compA['description']} from {compA['country']}")
     print(vs)
-    print(f"Compare A : {compB["name"]} a {compB["description"]} from {compB["country"]}")
+    print(f"Compare B : {compB['name']} a {compB['description']} from {compB['country']}")
     guess = input("Higher or Lower ? : ").lower()
     if((compA["follower_count"]>compB["follower_count"] and guess == "higher") or (compA["follower_count"]<compB["follower_count"] and guess == "lower") ):
         score += 1
@@ -23,7 +27,6 @@ def game():
         compB = data[random.randrange(0,len(data))]
         if(compA == compB):
             compB = data[random.randrange(0,len(data))]
-        clear()
         game()
     else:
         print(f"You Lost ! Your Score is {score}")
