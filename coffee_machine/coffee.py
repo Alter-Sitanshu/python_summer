@@ -43,6 +43,8 @@ def coffee():
                 print("Your order is Ready !!!")
                 print(f"Here is your change {money-bill}")
                 order_complete = True
+        elif order == "off":
+            return
         else:
             print("Wrong Order !!")
             coffee()
@@ -70,7 +72,9 @@ def restock(ingredient, amount):
 action = input("What do you want to do ?(restock/order) ").lower()
 if action == "order":
     coffee()
-else:
+elif action == "restock":
     ingredient = input("Enter the ingredient : ").lower()
     amount = eval(input("Enter amount : "))
     restock(ingredient,amount)
+elif action == "off":
+    print("Turning off machine")
