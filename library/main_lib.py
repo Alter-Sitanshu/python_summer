@@ -1,5 +1,7 @@
 import librarydoc
 
+
+print(librarydoc.logo)
 enter = input("Login to the library ?(yes/no) : ").lower()
 if enter == "yes":
     enter = True
