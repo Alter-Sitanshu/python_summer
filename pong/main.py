@@ -35,9 +35,11 @@ while not gameOver:
     if (ball.distance(r_paddle)<40) and (ball.xcor()>320):
         prev_heading = ball.heading()
         ball.setheading(540-prev_heading)
+        game.BALL_SPEED += 0.5
     if (ball.distance(l_paddle)<40) and (ball.xcor()<-320):
         prev_heading = ball.heading()
         ball.setheading(540-prev_heading)
+        game.BALL_SPEED += 0.5
     if ball.xcor() > 390:
         l_score.score +=1
         l_score.refresh()
