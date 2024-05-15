@@ -2,7 +2,6 @@ import turtle as t
 import time
 import game
 MOVE = 20
-
 def gameover():
     global gameOver
     gameOver = True
@@ -25,7 +24,7 @@ ball = game.Ball()
 game.divide_line()
 while not gameOver:
     screen.update()
-    time.sleep(0.1)
+    time.sleep(ball.delay)
     ball.move()
 
     #bounce logic
@@ -35,11 +34,11 @@ while not gameOver:
     if (ball.distance(r_paddle)<40) and (ball.xcor()>320):
         prev_heading = ball.heading()
         ball.setheading(540-prev_heading)
-        game.BALL_SPEED += 0.5
+        ball.delay *= 0.9
     if (ball.distance(l_paddle)<40) and (ball.xcor()<-320):
         prev_heading = ball.heading()
         ball.setheading(540-prev_heading)
-        game.BALL_SPEED += 0.5
+        ball.delay *= 0.9
     if ball.xcor() > 390:
         l_score.score +=1
         l_score.refresh()

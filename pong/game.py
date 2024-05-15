@@ -71,6 +71,7 @@ class Ball(t.Turtle):
         self.shape('circle')
         self.color('white')
         self.rng = [range(-30,30),range(150,220)]
+        self.delay = 0.1
         self.start()
     def start(self):
         self.home()
@@ -78,6 +79,7 @@ class Ball(t.Turtle):
     def move(self):
         self.forward(BALL_SPEED)
     def out_bounds(self, side):
+        self.delay = 0.1
         self.home()
         if side == 'right':
             self.setheading(random.choice(self.rng[1]))
