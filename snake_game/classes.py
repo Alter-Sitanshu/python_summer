@@ -1,5 +1,7 @@
 import turtle as t
 import random
+
+
 MOVE = 20
 UP = 90
 DOWN = 270
@@ -44,25 +46,40 @@ class Snake:
         instance.goto(self.state[-1].position())
         instance.speed(SPEED)
         self.state.append(instance)
+    def reset(self):
+        for states in self.state:
+            states.goto(2000,2000)
+        self.state.clear()
+        self.create_snake()
+        self.head = self.state[0]
+
 
 class ScoreBoard(t.Turtle):
-    def __init__(self):
+    def __init__(self, hs):
         super().__init__()
         self.penup()
         self.hideturtle()
         self.color("white")
-        self.goto(-50,280)
+        self.goto(-200,280)
         self.score = 0
+        self.highscore = hs
         score_str = "Score : {}".format(self.score)
         self.write(score_str, font=("Verdana",15, "normal"))
+        self.goto(100,280)
+        high_Score_str = "High Score : {}".format(self.highscore)
+        self.write(high_Score_str, font=("Verdana",15, "normal"))
     def refresh(self):
         self.clear()
+        self.goto(-200,280)
         score_str = "Score : {}".format(self.score)
         self.write(score_str, font=("Verdana",15, "normal"))
-
-    def game_over(self):
-        self.goto(-50,0)
-        self.write("Game Over", font=("Verdana",15, "normal"))
+        self.goto(100,280)
+        high_Score_str = "High Score : {}".format(self.highscore)
+        self.write(high_Score_str, font=("Verdana",15, "normal"))
+    def reset(self, file):
+        self.highscore = self.score
+        file.seek(0)
+        file.write(str(self.highscore))
 
 class Food(t.Turtle):
     def __init__(self):
@@ -75,6 +92,3 @@ class Food(t.Turtle):
         ycord = random.randint(-270,270)
         self.goto(xcord,ycord)
         self.dot(10,"blue")
-
-
-        
