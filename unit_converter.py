@@ -1,22 +1,35 @@
 import tkinter as tk
 from tkinter import ttk
+from tkinter import messagebox
 
 def mileToKm():
-    miles = eval(entry_1.get())
-    km = miles * 1.609
-    entry_2.insert(index=0,string=str(km))
+    try:  
+        miles = eval(entry_1.get())
+    except SyntaxError:
+        messagebox.showwarning("Null Error", "No Value Was Entered")
+    else:
+        km = miles * 1.609
+        entry_2.delete(0, tk.END)
+        entry_2.insert(index=0,string=str(km))
 
 def celsToFarh():
-    cels = eval(entry_1.get())
-    farh = 32 + (9 * cels / 5)
-    entry_2.insert(index=0,string=str(farh))
+    try:
+        cels = eval(entry_1.get())
+    except SyntaxError:
+        messagebox.showwarning("Null Error", "No Value Was Entered")
+    else:
+        farh = 32 + (9 * cels / 5)
+        entry_2.delete(0, tk.END)
+        entry_2.insert(index=0,string=str(farh))
 
 def converter():
     option = combo.get()
     if option == "Miles To Km":
         mileToKm()
-    else:
+    elif option == "Cels To Farh":
         celsToFarh()
+    else:
+        messagebox.showwarning("WARNING", "Select a Converter")
 
 def setconverter(event):
     option = combo.get()
