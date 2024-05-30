@@ -2,12 +2,12 @@ import tkinter as tk
 from tkinter import ttk
 
 def mileToKm():
-    miles = int(entry_1.get())
+    miles = eval(entry_1.get())
     km = miles * 1.609
     entry_2.insert(index=0,string=str(km))
 
 def celsToFarh():
-    cels = int(entry_1.get())
+    cels = eval(entry_1.get())
     farh = 32 + (9 * cels / 5)
     entry_2.insert(index=0,string=str(farh))
 
