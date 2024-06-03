@@ -100,5 +100,5 @@ def GUI() -> None:
     game.boardInitiator()
     screen.mainloop()
 
-#----initialising the program-------
+#----initialising the program------
 GUI()
