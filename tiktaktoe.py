@@ -91,7 +91,7 @@ def gameOver() -> bool:
 #----building the GUI for the game-----
 screen = None
 def GUI() -> None:
-    global gameOver_label,screen
+    global screen
     screen = tk.Tk()
     screen.minsize(width=800, height=700)
     screen.title("Tik-Tak-Toe")
