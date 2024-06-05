@@ -76,5 +76,9 @@ false_button = tk.Button(master=screen, text="False", padx=10, pady=10, fg = "wh
 true_button.grid(column=0, row=2, pady=30)
 false_button.grid(column=1, row=2, pady=30)
 
-QuizBrain.next_question()
-screen.mainloop()
+def main():
+    QuizBrain.next_question()
+    screen.mainloop()
+
+if __name__ == "__main__":
+    main()
