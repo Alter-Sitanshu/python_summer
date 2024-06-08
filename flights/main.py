@@ -19,6 +19,12 @@ adults = int(input("No. of adults : "))
 
 sender = os.environ.get("SENDER")
 app_pass = os.environ.get("APP_PASS")
+
+#-----getting the user from the input------
+name = input("Enter the receiver's User Name : ").title()
+receiver_mail = sheets.getUser(name=name)["email"]
+
+
 def priceCheck():
     for content in data:
         des = content["location"]
@@ -30,7 +36,7 @@ def priceCheck():
             with smtplib.SMTP('smtp.gmail.com') as connection:
                 connection.starttls()
                 connection.login(user=sender, password=app_pass)
-                connection.sendmail(from_addr=sender, to_addrs=os.environ.get("RECEIVER"), msg=msg )
+                connection.sendmail(from_addr=sender, to_addrs=receiver_mail, msg=msg )
 
 priceCheck()
 
