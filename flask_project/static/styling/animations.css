@@ -1,0 +1,73 @@
+@keyframes left-roll{
+    from{
+        transform: translateX(-600px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes right-roll {
+    from{
+        transform: translateX(600px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+@keyframes down-roll {
+    from{
+        transform: translateY(150px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+}
+.pp{
+    animation: left-roll 1.2s ease-in both;
+    transform: translateX(-300px);
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+h3{
+    animation: left-roll 1s ease-in 1.2s both;
+    transform: translateX(-300px);
+
+}
+.text{
+    animation: left-roll 1s ease-in 2.2s both;
+    transform: translateX(-300px);
+
+}
+.texts{
+    animation: left-roll 1s ease-in 3.2s both;
+    transform: translateX(1300px);
+
+}
+.acads{
+    animation: right-roll 1.2s ease-in-out 4.2s both;
+    transform: translateX(1300px);
+
+}
+.skill{
+    animation: right-roll 1.2s ease-in-out 4.4s both;
+    transform: translateX(300px);
+
+}
+.interest{
+    animation: right-roll 1.2s ease-in-out 4.6s both;
+    transform: translateX(1300px);
+
+}
+footer{
+    animation: down-roll 1.5s ease-in-out 5.8s both;
+    transform: translateY(300px);
+}
+
+

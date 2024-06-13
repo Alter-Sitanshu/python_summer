@@ -1,0 +1,69 @@
+.left-main{
+    display: flex;
+    flex-direction: column;
+    
+}
+.left-main div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pp{
+    height: 138px;
+    border-radius: 69px;
+    box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.5);
+}
+h3{
+    font-family:Silkscreen;
+    color: white;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+.text{
+    margin: 0;
+    color: white;
+    font-size: 27px;
+    font-family: Bebas Neue;
+}
+.texts{
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+    font-family:Roboto;
+}
+.acads{
+    row-gap: 30px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.acads img,
+.interest img{
+    height: 80px;
+    width: 80px;
+}
+.skill{
+    row-gap: 30px;
+    padding-left: 20px;
+    padding-top: 30px;
+}
+.skill img{
+    height: 60px;
+    width: 60px;
+}
+.interest P{
+    font-family:Silkscreen;
+    color: white;
+    font-size: 36px;
+    margin: 20px;
+}
+footer p{
+    font-family:Silkscreen;
+    color: white;
+    font-size: 24px;
+    margin: 20px;
+}
+footer img{
+    width: 60px;
+    
+}
