@@ -1,0 +1,63 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.head-style{
+    height: 20vh;
+    background-color: rgb(125, 255, 255);
+    z-index: 1;
+}
+.post{
+    min-width: 25vw;
+    max-width: 30vw;
+    min-height: 30vh;
+    margin: 2vh auto;
+    padding: 2vh 1vw;
+    background-color: rgb(234, 234, 233);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.post h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 4vh;
+    color: chartreuse;
+    margin: 1vh 0;
+}
+.post h4{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2vh;
+    color: rgb(255, 0, 0);
+    margin: 1vh 0;
+}
+.post a{
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: coral;
+}
+.post p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 4vh;
+}
+.all_posts{
+    z-index: 10;
+    position: absolute;
+    top: 8%;
+    left: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 70%;
+    margin: 0 auto;
+}
+.all_posts h3{
+    min-width: 25vw;
+    margin: 2vh auto;
+    display:block;
+}
+.all_posts h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3vh;
+    color: rgb(83, 82, 82);
+}
