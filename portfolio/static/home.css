@@ -1,0 +1,101 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+.navbar{
+    position: absolute;
+    top: 0;
+    margin: 0 auto;
+    width: 70%;
+    left: 15%;
+    background-color: rgb(19, 19, 19);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 0.8vw 0.8vw;
+    animation: intro 0.8s normal;
+    padding: 1vh 1.5vw;
+}
+.navbar a{
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2vw;
+    margin: 1vh 1vw;
+    color: grey;
+    border: none;
+    padding: 1vh 3vh;
+    transition: all 0.35ms linear;
+}
+.navbar a:hover{
+    color: greenyellow;
+    text-shadow:2px 2px 20px #62BA1B;
+}
+.navbar a:active{
+    color: red;
+    text-shadow: 2px 2px 20px red;
+}
+.main{
+    width: 80%;
+    margin: 20vh auto 30vh auto;
+    display: flex;
+    flex-direction: row;
+    column-gap: 2vh;
+    padding: 4vh 7vw;
+    align-items: center;
+    justify-content: space-between;
+}
+.content{
+    max-width: 70vh;
+    padding: 2vh;
+    color: grey;
+    animation: intro 0.8s normal;
+}
+.content h1{
+    margin: 1vh 0 2vh 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 7vh;
+}
+.content h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.5vh;
+    margin-bottom: 8vh;
+    font-weight: 100;
+}
+.initial-button{
+    padding: 2.8vh 5vw;
+    font-size: 2.3vh;
+    border-radius: 10px;
+    background-color: #62BA1B;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transform: all 0.35ms ease-out;
+    box-shadow: 2px 2px 20px #62BA1B;
+}
+.initial-button:hover{
+    box-shadow: 
+        2px 2px 20px #62BA1B,
+        inset 2px 2px 20px rgba(255, 255, 255, 0.6);
+}
+.main img{
+    height: 8%;
+    width: 30%;
+    border-radius: 50%;
+    animation: intro 0.8s normal;
+}
+
+@keyframes intro{
+    0%{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

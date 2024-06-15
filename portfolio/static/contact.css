@@ -1,0 +1,69 @@
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+    width: 70%;
+    margin: 40vh auto;
+    text-align: center;
+    background-color: rgb(16, 16, 16);
+    padding: 5vh 3vh;
+    border-radius: 5vh;
+}
+.contact{
+    color: #7ae224;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 32vh;
+    margin: 2vh auto 8vh auto;
+    font-size: 6vh;
+    text-shadow: 0px 2px 50px #62BA1B;
+}
+#mail,
+#message{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 2vh;
+    text-align: center;
+    margin: 3vh auto;
+}
+#mail-input{
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+    padding: 1vh 3vh;
+    background-color: rgb(16, 16, 16);
+    border: 2px solid white;
+    border-radius: 2vh;
+    color: white;
+    width: 20vw;
+}
+#content{
+    resize: none;
+    width: 50vw;
+    height: 80vh;
+    margin-top: 1vh;
+    background-color: rgb(16, 16, 16);
+    border: 2px solid white;
+    border-radius: 2vh;
+    height: 10vh;
+    color: white;
+    padding: 2vh 3vw;
+    margin-bottom: 6vh;
+}
+.submit-button{
+    padding: 2.8vh 2.3vw;
+    font-size: 2.3vh;
+    border-radius: 10px;
+    background-color: #62BA1B;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transform: all 0.35ms ease-out;
+    box-shadow: 2px 2px 20px #62BA1B;
+    width: 10vw;
+    text-align: center;
+    margin: 0 auto;
+}
+.submit-button:hover{
+    box-shadow: 
+        2px 2px 20px #62BA1B,
+        inset 2px 2px 20px rgba(255, 255, 255, 0.6);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/home.css">
+    <link rel="stylesheet" href="../static/edu.css">
+    <link rel="stylesheet" href="../static/contact.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="#education" class="edu-link">Education</a>
+        <a href="#education" class="edu-link">Skills</a>
+        <a href="#FORM">Contact Me</a>
+    </nav>
+    <div class="main">
+        <div class="content">
+            <h1>Sitanshu Mohapatra</h1>
+            <h3>A budding engineer from IIT Guwahati, I harbor keen interest in software development and robotics, trying to solve real world problems though machine learning</h3>
+            <button class="initial-button" onclick="window.location.href='/#education'">Let's Get Started</button>
+        </div>
+        <img src="static/images/IMG_20240418_203537164.jpg" alt="image">
+    </div>
+    <h2 class="heading-education" id="education">Education and Skills</h2>
+    <div class="educations">
+        <div class="edu">
+            <img src="static/images/cbse.svg" alt="">
+            <img src="static/images/IITG_logo.png" alt="">
+        </div>
+        <div class="skills">
+            <div class="languages">
+                <img src="static/images/html.png" alt="">
+                <img src="static/images/CSS.png" alt="">
+                <img src="static/images/js.webp" alt="">
+                <img src="static/images/Python.png" alt="">
+                <img src="static/images/java.webp" alt="">
+            </div>
+            <div class="libraries">
+                <img src="static/images/numpy.png" alt="">
+                <img src="static/images/panda.png" alt="">
+                <img src="static/images/tk.png" alt="">
+                <img src="static/images/jinja.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="contact-me-form">
+        <form action="/submit" method="POST" id="FORM">
+            <h2 class="contact">Contact Me</h2>
+            <div>
+                <label id="mail">Your Email</label><br>
+                <input type="mail" name="Email" id="mail-input"><br>
+            </div>
+            <div>
+                <label id="message">Content</label><br>
+                <textarea name="message" id="content"></textarea>
+            </div>
+            <input type="submit" value="Submit" class="submit-button">
+        </form>
+    </div>
+</body>
+</html>

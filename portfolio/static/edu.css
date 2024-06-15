@@ -1,0 +1,58 @@
+.heading-education{
+    color: #7ae224;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    max-width: 30vw;
+    margin: 7vh auto;
+    font-size: 6vh;
+    text-shadow: 0px 2px 50px #62BA1B;
+}
+.educations{
+    width: 80%;
+    margin: 10vh auto;
+    display: flex;
+    column-gap: 1vw;
+    padding: 5vh 0;
+    flex-direction: row;
+}
+.edu{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 0px 0.2px rgba(255, 255, 255, 1);
+    animation: intro 0.6s ease-in-out;
+}
+.skills{
+    display: flex;
+    flex-direction: column;
+    row-gap: 7vh;
+}
+.languages{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    animation: intro 0.6s ease-in-out;
+}
+.libraries{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    animation: intro 0.6s ease-in-out;
+}
+.edu img{
+    width: 40%;
+}
+.skills img{
+    width: 12%;
+}
+@keyframes intro{
+    0%{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
