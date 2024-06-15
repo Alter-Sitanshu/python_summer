@@ -32,7 +32,7 @@ def priceCheck():
         params = customer.initialise(loc=loc, des=des, depart=depart, adults=adults)
         price_list = customer.flightSearch(params=params)
         if min(price_list)<min_price:
-            msg = f"Header :DEALS FOUND !!!\n\nDeals available for {des}"
+            msg = f"Subject :DEALS FOUND !!!\n\nDeals available for {des}"
             with smtplib.SMTP('smtp.gmail.com') as connection:
                 connection.starttls()
                 connection.login(user=sender, password=app_pass)
