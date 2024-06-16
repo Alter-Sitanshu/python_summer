@@ -17,6 +17,7 @@ def home_render():
 
 @app.route('/submit', methods=["POST"])
 def handle_submit():
+    global connection
     mail_address = request.form.get('Email')
     message = request.form.get('message')
     connection.sendmail(from_addr=SENDER, to_addrs=RECEIVER, msg=f"Subject: New Connewction\n\n{mail_address}\n\n{message}" )
