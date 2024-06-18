@@ -1,0 +1,18 @@
+{
+    "Cafe Coffee Day": {
+        "name": "Cafe Coffee Day",
+        "loc": "https://maps.app.goo.gl/u4yQonxN2NoSwbZg7",
+        "opening": "09:30:00",
+        "closing": "20:40:00",
+        "coffee": "4",
+        "wifi": "5"
+    },
+    "Sundar Cafe": {
+        "name": "Sundar Cafe",
+        "loc": "https://maps.app.goo.gl/u4yQonxN2NoSwbZg7",
+        "opening": "10:00:00",
+        "closing": "22:00:00",
+        "coffee": "2",
+        "wifi": "5"
+    }
+}

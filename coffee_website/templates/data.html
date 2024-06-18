@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Cafes</title>
+    <link rel="stylesheet" href="../static/list.css">
+</head>
+<body>
+    <h1>All Cafes</h1>
+    <hr>
+    <div class="listing">
+        <p>Name</p>
+        <p>Location</p>
+        <p>Open Time</p>
+        <p>Close Time</p>
+        <p>Coffee rating</p>
+        <p>Wifi Strength</p>
+    </div>
+    <hr>
+    {% for names in data %}
+        <div class="listing">
+            <p>{{ data[names]["name"] }}</p>
+            <a href="{{ data[names]['loc'] }}" target="_blank">Loc</a>
+            <p>{{ data[names]["opening"] }}</p>
+            <p>{{ data[names]["closing"] }}</p>
+            <p>{{ data[names]["coffee"] }}</p>
+            <p>{{ data[names]["wifi"] }}</p>
+        </div>
+        <hr>
+    {% endfor %}
+    <a href="{{ url_for('home') }}" class="back_link">Back to home page</a>
+</body>
+</html>

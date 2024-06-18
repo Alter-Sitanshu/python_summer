@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New location</title>
+    <link rel="stylesheet" href="../static/add.css">
+</head>
+<body>
+    <h2>Add a new cafe</h2>
+    <hr>
+    <form action="/add" method="post">
+        <div>
+            {{ form.name.label }}
+            {{ form.name }}
+        </div>
+        <div>
+            {{ form.loc.label }}
+            {{ form.loc }}
+        </div>
+        <div>
+            {{ form.opening.label }}
+            {{form.opening }}
+        </div>
+        <div>
+            {{ form.closing.label }}
+            {{ form.closing }}
+        </div>
+        <div>
+            {{ form.coffee.label }}
+            {{ form.coffee }}
+        </div>
+        <div>
+            {{ form.wifi.label }}
+            {{ form.wifi }}
+        </div>
+        {{ form.submit }}
+    </form>
+    <a href="{{ url_for('home') }}" class="back_link">Back to home page</a>
+</body>
+</html>

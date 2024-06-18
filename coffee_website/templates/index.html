@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee House</title>
+    <link rel="stylesheet" href="../static/home.css">
+</head>
+<body>
+    <h3>Welcome to</h3>
+    <h1>Coffee House</h1>
+    <hr>
+    <p>You have come to the perfect place to enjoy some coffee</p>
+    <div>
+        <a href="{{ url_for('list') }}" class="list_button">See List</a>
+        <a href="{{ url_for('form') }}" class="add_button">Add New Location</a>
+    </div>
+</body>
+</html>

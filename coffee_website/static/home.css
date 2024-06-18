@@ -1,0 +1,59 @@
+body{
+    background-color:rgb(33, 33, 32);
+    padding: 0;
+    margin: 0;
+}
+h1{
+    margin: 1vh auto;
+    color: rgb(211, 160, 22);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 7vh;
+    width: fit-content;
+    text-shadow: 2px 2px 20px rgb(241, 182, 18, 0.5);
+}
+h3{
+    margin: 20vh auto 1.5vh auto;
+    text-shadow: 2px 2px 20px rgb(241, 182, 18, 0.5);
+    width: fit-content;
+    color: rgb(211, 160, 22);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+hr{
+    margin: 5vh auto;
+    width: 70%;
+}
+p{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3vh;
+    width: fit-content;
+    margin: 0 auto 5vh auto;
+}
+div{
+    display: flex;
+    column-gap: 4vw;
+    justify-content: space-between;
+    width: 25%;
+    padding: 2vh;
+    margin: 15vh auto;
+}
+.add_button,
+.list_button{
+    padding: 2vh 1.5vw;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(211, 160, 22);
+    cursor: pointer;
+    box-shadow: 2px 2px 20px rgba(253, 186, 0, 0.905);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all 0.25s;
+    text-decoration: none;
+}
+.add_button:hover,
+.list_button:hover{
+    box-shadow: 
+        2px 2px 20px rgba(253, 186, 0, 0.905),
+        inset 2px 2px 20px rgb(255, 255, 255)
+        ;
+}
