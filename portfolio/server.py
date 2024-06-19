@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request
 import smtplib
 import os
+from email.mime.multipart import MIMEMultipart
+from email.header import Header
+from email.mime.text import MIMEText
 
 RECEIVER = os.environ.get('RECEIVER')
 SENDER = os.environ.get('SENDER')
@@ -18,9 +21,14 @@ def home_render():
 @app.route('/submit', methods=["POST"])
 def handle_submit():
     global connection
+    msg = MIMEMultipart()
+    msg["From"] = SENDER
+    msg["To"] = RECEIVER
     mail_address = request.form.get('Email')
     message = request.form.get('message')
-    connection.sendmail(from_addr=SENDER, to_addrs=RECEIVER, msg=f"Subject: New Connewction\n\n{mail_address}\n\n{message}" )
+    msg["Subject"]= Header("New Connection request")
+    msg.attach(MIMEText(f"{mail_address}\n{message}", "plain", "utf-8"))
+    connection.sendmail(from_addr=SENDER, to_addrs=RECEIVER, msg=msg.as_string() )
     return render_template('index.html')
 
 
