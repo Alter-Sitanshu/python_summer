@@ -4,9 +4,9 @@ import random
 BACKGROUND_COLOR = "#B1DDC6"
 
 try:
-    df = pd.read_csv("data/to_learn.csv")
+    df = pd.read_csv("flash_card/data/to_learn.csv")
 except FileNotFoundError:
-    df = pd.read_csv("data/french_words.csv")
+    df = pd.read_csv("flash_card/data/french_words.csv")
     data = df.to_dict(orient="records")
 else:
     data = df.to_dict(orient="records")
@@ -16,7 +16,7 @@ timer = None
 def know() -> None:
     data.remove(random_word)
     new_df = pd.DataFrame(data)
-    new_df.to_csv("data/to_learn.csv", index=None)
+    new_df.to_csv("flash_card/data/to_learn.csv", index=None)
     screen.after_cancel(timer)
     new_word()
 def dont_know():
@@ -40,15 +40,15 @@ screen.title("Flash Card")
 screen.config(padx=50, pady=50, bg=BACKGROUND_COLOR)
 
 canvas = tk.Canvas(master=screen, width=800, height=526, bg=BACKGROUND_COLOR, highlightthickness=0)
-card_front = tk.PhotoImage(file="images/card_front.png")
-card_back = tk.PhotoImage(file="images/card_back.png")
+card_front = tk.PhotoImage(file="flash_card/images/card_front.png")
+card_back = tk.PhotoImage(file="flash_card/images/card_back.png")
 card_image = canvas.create_image(400, 263, image= card_front)
 title = canvas.create_text(400, 150, text="title", font=("Ariel", 40, "italic"), fill="black")
 word = canvas.create_text(400, 252, text="Word", font=("Ariel", 60, "bold"), fill="black")
 canvas.grid(column=0, row=0, columnspan=2)
 
-yes_img = tk.PhotoImage(file="images/right.png")
-no_img = tk.PhotoImage(file="images/wrong.png")
+yes_img = tk.PhotoImage(file="flash_card/images/right.png")
+no_img = tk.PhotoImage(file="flash_card/images/wrong.png")
 yes = tk.Button(master=screen, image=yes_img, highlightthickness=0, command=know)
 no = tk.Button(master=screen, image=no_img, highlightthickness=0, command=dont_know)
 yes.grid(column=0, row=1)
