@@ -52,7 +52,9 @@ def search():
     except JSONDecodeError:
         messagebox.showerror("Error", "Not Found")
     else:
-        messagebox.showinfo("Search Result", f"email:{info["email"]}\npassword:{info["password"]}")
+        mail = info["email"]
+        passw = info["password"]
+        messagebox.showinfo("Search Result", f"email:{mail}\npassword:{passw}")
 #---------Random password generator----------
 def random_pass():
     import random
